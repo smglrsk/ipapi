@@ -22,14 +22,20 @@ As a MongoDB you can use MongoDB Atlas.
 The app uses two models:  User and IP.
 
 The list of routes:
+
 Method :  POST       Path:   /users     JSON parameters:  name, email, password (used for the registration of a new user)
+
 Method :  POST       Path:   /users/login     JSON parameters:   email, password (returns JWT token)
+
 
 Method :  POST       Path:   /ip     JSON parameters:  ip       (requires the authentication)
 In the background it feeds the rest of data from ipstack.com  for a given IP or URL.
 
+
 Method :  DELETE       Path:   /ip     JSON parameters:  ip       (requires the authentication)
+
 Method :  GET       Path:   /ip     JSON parameters:  ip       (requires the authentication)
+
 
 The login return a  JWT token  which should be attached in the Authorization  parameters as Bearer Token.
 
